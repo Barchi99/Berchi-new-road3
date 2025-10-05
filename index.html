@@ -46,6 +46,23 @@
 <title></title>
 </head>
 <body>
+<div id="overlay" style="font-size: 32px; direction: rtl; background: rgba(0,0,0,0.8); color: white; position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; z-index: 9999; text-align: center;">
+<h2><strong>⚠️ هشدار!</strong></h2>
+<p><strong>همشهریان عزیز !</strong></p>
+<p>پلان اصلاحی شبکات سرکهای شهر کابل غرض آگهی و اطلاع عامه به اشتراک گذاشته شده است، در این پلان مسیرهای اصلی شبکات سرک های شهرکابل مشخص گردیده است اما قابل تذکر است که خطوط مشخص شده در پلان
+  متذکره دقت لازم را نداشته و به دلایل ذیل ورود تغیرات در وقت تطبیق عملی آن در ساحه، محتمل خواهد بود:</p>
+<p>1- تصویر که ملاحظه مینماید تصویر فضایی بوده و از فضا گرفته شده است بنابراین خطوط نشان داده شده بالای تصاویر فضایی به دلیل زوایایی ،تصاویر در بسیار ساحات متفاوت و متغیر معلوم میگردد.</p>
+<p>2- این امکان وجود دارد که مسیرهای شبکات سرک نشان داده شده در تصویر به دلیل برخورد با مساجد شریف ویا ابدات تاریخی تغیر نماید.</p>
+<p>3 - توجه نماید که مسیر نهایی سرکها بعد از سروی ،توپوگرافی دیزاین و سروی املاکی مشخص گردیده و نیز میزان استملاک ساحه نظر به مسیر تعین شده در پلان املاکی مشخص خواهد گردید.</p>
+<button onclick="showMap()" style="font-size: 28px; padding: 12px 24px;">ادامه</button>
+</div>
+<script>
+  function showMap() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('map').style.display = 'block';
+  }
+</script>
+
 <div id="map">
 <div class="ol-popup" id="popup">
 <a class="ol-popup-closer" href="#" id="popup-closer"></a>
@@ -65,22 +82,12 @@
 <script src="./resources/Autolinker.min.js"></script>
 <script src="./resources/qgis2web.js"></script>
 
-<div id="legend" style="
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(255,255,255,0.9);
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 14px;
-    font-family: Tahoma, sans-serif;
-    z-index: 999;
-    direction: rtl;
-">
-<strong>لیجند نقشه:</strong><br/>
-<span style="color: red;">■</span> سرک حلقوی<br/>
-<span style="color: blue;">■</span> سرک فرعی<br/>
-<span style="color: green;">■</span> ایستگاه بس<br/>
+<div id="legend" style="position: fixed; bottom: 20px; left: 20px; background: white; border: 2px solid #444; padding: 10px; font-size: 18px; font-family: Tahoma; direction: rtl; z-index: 9998;">
+<strong>شرح علایم</strong>
+<ul style="list-style: none; padding: 0; margin: 10px 0;">
+<li><span style="display: inline-block; width: 20px; height: 10px; background: yellow; border: 1px solid #000; margin-left: 10px;"></span> سرک‌های اتصالی</li>
+<li><span style="display: inline-block; width: 14px; height: 14px; background: red; border: 3px solid yellow; border-radius: 50%; margin-left: 10px;"></span> اماکن مشهور</li>
+</ul>
 </div>
 </body>
 </html>
