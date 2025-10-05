@@ -44,19 +44,48 @@
         }
         </style>
 <title></title>
-</head>
-<body>
-<div id="overlay" style="font-size: 32px;">
+<style>
+#overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    font-size: 32px;
+    font-family: 'Tahoma', sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding: 40px;
+}
+#map {
+    display: none;
+}
+button {
+    padding: 12px 24px;
+    font-size: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: white;
+    color: #b71c1c;
+    border: none;
+    border-radius: 6px;
+}
+</style></head>
+<body><div id="overlay">
 <h2><strong>⚠️ هشدار!</strong></h2>
 <p><strong>همشهریان عزیز !</strong></p>
 <p>پلان اصلاحی شبکات سرکهای شهر کابل غرض آگهی و اطلاع عامه به اشتراک گذاشته شده است، در این پلان مسیرهای اصلی شبکات سرک های شهرکابل مشخص گردیده است اما قابل تذکر است که خطوط مشخص شده در پلان
-  متذکره دقت لازم را نداشته و به دلایل ذیل ورود تغیرات در وقت تطبیق عملی آن در ساحه، محتمل خواهد بود:</p>
-<p>1- تصویر که ملاحظه مینماید تصویر فضایی بوده و از فضا گرفته شده است بنابراین خطوط نشان داده شده بالای تصاویر فضایی به دلیل زوایایی ،تصاویر در بسیار ساحات متفاوت و متغیر معلوم میگردد.</p>
-<p>2- این امکان وجود دارد که مسیرهای شبکات سرک نشان داده شده در تصویر به دلیل برخورد با مساجد شریف ویا ابدات تاریخی تغیر نماید.</p>
-<p>3 - توجه نماید که مسیر نهایی سرکها بعد از سروی ،توپوگرافی دیزاین و سروی املاکی مشخص گردیده و نیز میزان استملاک ساحه نظر به مسیر تعین شده در پلان املاکی مشخص خواهد گردید.</p>
-<button onclick="showMap()" style="font-size: 28px; padding: 12px 24px;">ادامه</button>
+متذکره دقت لازم را نداشته و به دلایل ذیل ورود تغیرات در وقت تطبیق عملی آن در ساحه، محتمل خواهد بود:</p>
+<p>۱- تصویر که ملاحظه مینماید تصویر فضایی بوده و از فضا گرفته شده است بنابراین خطوط نشان داده شده بالای تصاویر فضایی به دلیل زوایایی ،تصاویر در بسیار ساحات متفاوت و متغیر معلوم میگردد.</p>
+<p>۲- این امکان وجود دارد که مسیرهای شبکات سرک نشان داده شده در تصویر به دلیل برخورد با مساجد شریف ویا ابدات تاریخی تغیر نماید.</p>
+<p>۳- توجه نماید که مسیر نهایی سرکها بعد از سروی ،توپوگرافی دیزاین و سروی املاکی مشخص گردیده و نیز میزان استملاک ساحه نظر به مسیر تعین شده در پلان املاکی مشخص خواهد گردید.</p>
+<button onclick="showMap()">ادامه</button>
 </div>
-
 <div id="map">
 <div class="ol-popup" id="popup">
 <a class="ol-popup-closer" href="#" id="popup-closer"></a>
@@ -70,10 +99,4 @@
 <script src="./resources/ol.js"></script>
 <script src="./resources/ol-layerswitcher.js"></script>
 <script src="resources/photon-geocoder-autocomplete.min.js"></script>
-<script src="layers/outsid_naheya_1.js"></script><script src="layers/RingRoad_2.js"></script><script src="layers/Sub_road_3.js"></script><script src="layers/busstop_4.js"></script>
-<script src="styles/outsid_naheya_1_style.js"></script><script src="styles/RingRoad_2_style.js"></script><script src="styles/Sub_road_3_style.js"></script><script src="styles/busstop_4_style.js"></script>
-<script src="./layers/layers.js" type="text/javascript"></script>
-<script src="./resources/Autolinker.min.js"></script>
-<script src="./resources/qgis2web.js"></script>
-</body>
-</html>
+<script src="layers/outsid_nahe
